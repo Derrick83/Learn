@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Navbar from './components/Navbar.jsx';
+import Navbar from './components/navbar/Navbar.jsx';
 import Profile from './components/profile_page/profile.jsx';
-
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +25,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
+        <Navbar />
         {
           this.switchViews(this.state.currentPg)
         }
